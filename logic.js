@@ -39,10 +39,23 @@ const Tweeter = function(){
         return _posts
     }
 
+    const generatePostID = function(){
+        let counter = 1;
+        for (let i = 0; i < _posts.length; i ++){
+                lastPost = _posts[i].id.replace("p","")
+                if (lastPost > counter){
+                    counter = lastPost
+            }
+        }
+        const postID = "p" + (parseInt(counter) + 1)
+        return postID
+    }
+
     const addPost = function(someText){
+        const postID = generatePostID()
         let newPost = {
             text : someText,
-            id: "p" + (_posts.length + 1),
+            id: postID,
             comments: [],
         }
         _posts.push(newPost)
@@ -82,7 +95,6 @@ const Tweeter = function(){
         }
         const CommentID = "c" + (parseInt(counter) + 1)
         return CommentID
-
     }
 
     const addComment = function(someText , postId){

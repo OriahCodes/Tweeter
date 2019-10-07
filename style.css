@@ -67,7 +67,7 @@ body{
     margin: 10px;
 }
 
-.delete{
+.delete-post{
     cursor: pointer;
     color: #ecf0f1;
     background-color: #e74c3c;
@@ -75,13 +75,14 @@ body{
     padding: 5px;
     border-radius: 3px;
     font-size: 0.8em;
+    margin-top: 3vh;
+
 }
 
 .delete-comment{
-    /* cursor: pointer;
+    cursor: pointer;
     color: #e74c3c;
-    width: 4.4em; */
-    margin-top: 3vh;
+    width: 4.4em;
 }
 
 
